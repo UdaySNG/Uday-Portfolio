@@ -1,0 +1,40 @@
+@use "./mixins";
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+.profile_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  width: 40rem;
+  height: 50rem;
+  margin-top: -13rem;
+  border-radius: 50px;
+  @include mixins.flexCenter;
+}
+
+@media screen and (max-width: 768px) {
+  .profile_container {
+    justify-content: flex-start;
+    margin-right: 2rem;
+    width: 80%; /* Pas de breedte aan naar wens */
+    height: auto; /* Laat de hoogte automatisch aanpassen */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .profile_container {
+    justify-content: flex-start;
+    margin-right: 1rem;
+    width: 90%; /* Pas de breedte aan naar wens */
+    height: auto; /* Laat de hoogte automatisch aanpassen */
+  }
+}
